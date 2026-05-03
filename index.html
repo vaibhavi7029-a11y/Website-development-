@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vaibhavi | Developer</title>
+<title>Vaibhavi | 3D Portfolio</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -18,12 +18,13 @@
     </nav>
 </header>
 
+<!-- Hero -->
 <section id="home">
     <h2 id="typing"></h2>
-    <p>Frontend Developer | UI Designer</p>
-    <button onclick="scrollToContact()">Hire Me</button>
+    <p>Frontend Developer | 3D UI Designer</p>
 </section>
 
+<!-- Skills -->
 <section id="skills">
     <h2>Skills</h2>
     <div class="cards">
@@ -34,6 +35,7 @@
     </div>
 </section>
 
+<!-- Projects -->
 <section id="projects">
     <h2>Projects</h2>
     <div class="cards">
@@ -42,9 +44,16 @@
     </div>
 </section>
 
+<!-- Contact -->
 <section id="contact">
-    <h2>Contact</h2>
-    <button onclick="scrollToTop()">Back to Top</button>
+    <h2>Contact Me</h2>
+    <form id="form">
+        <input type="text" placeholder="Name" required>
+        <input type="email" placeholder="Email" required>
+        <textarea placeholder="Message"></textarea>
+        <button>Send</button>
+    </form>
+    <p id="msg"></p>
 </section>
 
 <footer>
