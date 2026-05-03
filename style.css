@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -7,7 +6,7 @@
 }
 
 body {
-    background: #020617;
+    background: radial-gradient(circle,#020617,#000);
     color: white;
 }
 
@@ -16,16 +15,13 @@ header {
     display: flex;
     justify-content: space-between;
     padding: 15px;
-    background: rgba(0,0,0,0.6);
+    background: rgba(0,0,0,0.7);
 }
 
-/* Hero */
-#home {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+/* Sections */
+section {
+    padding: 60px;
+    text-align: center;
 }
 
 /* Cards */
@@ -33,28 +29,42 @@ header {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    gap: 20px;
 }
 
 .card {
-    margin: 15px;
-    padding: 20px;
-    border-radius: 15px;
+    width: 200px;
+    height: 200px;
     background: rgba(255,255,255,0.05);
-    backdrop-filter: blur(10px);
-    transition: 0.4s;
-    opacity: 0;
-    transform: translateY(40px);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s;
+    box-shadow: 0 0 20px rgba(0,255,255,0.2);
 }
 
-/* Neon hover */
+/* Glow */
 .card:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 20px cyan;
+    box-shadow: 0 0 30px cyan;
 }
 
-/* Button */
+/* Form */
+form {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    margin: auto;
+}
+
+input, textarea {
+    margin: 5px;
+    padding: 10px;
+    border: none;
+}
+
 button {
-    padding: 10px 20px;
+    padding: 10px;
     background: cyan;
     border: none;
     cursor: pointer;
