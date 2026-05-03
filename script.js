@@ -1,4 +1,4 @@
-// Typing
+// Typing animation
 let text = "Hi, I'm Vaibhavi 👩‍💻";
 let i = 0;
 
@@ -11,26 +11,31 @@ function typing(){
 }
 typing();
 
-// Scroll reveal
-window.addEventListener("scroll", () => {
-    let cards = document.querySelectorAll(".card");
+// 3D Card Effect
+const cards = document.querySelectorAll(".card");
 
-    cards.forEach(card => {
-        let pos = card.getBoundingClientRect().top;
-        let screen = window.innerHeight;
+cards.forEach(card => {
+    card.addEventListener("mousemove", (e) => {
+        let x = e.offsetX;
+        let y = e.offsetY;
 
-        if(pos < screen - 100){
-            card.style.opacity = 1;
-            card.style.transform = "translateY(0)";
-        }
+        let centerX = card.offsetWidth / 2;
+        let centerY = card.offsetHeight / 2;
+
+        let rotateX = -(y - centerY) / 10;
+        let rotateY = (x - centerX) / 10;
+
+        card.style.transform =
+            `rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.05)`;
+    });
+
+    card.addEventListener("mouseleave", () => {
+        card.style.transform = "rotateX(0) rotateY(0)";
     });
 });
 
-// Scroll functions
-function scrollToContact(){
-    document.getElementById("contact").scrollIntoView({behavior:"smooth"});
-}
-
-function scrollToTop(){
-    window.scrollTo({top:0, behavior:"smooth"});
-}
+// Form
+document.getElementById("form").addEventListener("submit",(e)=>{
+    e.preventDefault();
+    document.getElementById("msg").innerHTML="Message Sent ✅";
+});
