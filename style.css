@@ -1,1 +1,61 @@
 
+* {
+    margin: 0;
+    padding: 0;
+    font-family: monospace;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #020617;
+    color: white;
+}
+
+/* Navbar */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    background: rgba(0,0,0,0.6);
+}
+
+/* Hero */
+#home {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Cards */
+.cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    margin: 15px;
+    padding: 20px;
+    border-radius: 15px;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+    transition: 0.4s;
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+/* Neon hover */
+.card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px cyan;
+}
+
+/* Button */
+button {
+    padding: 10px 20px;
+    background: cyan;
+    border: none;
+    cursor: pointer;
+}
